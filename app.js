@@ -11,7 +11,7 @@
 //     age:34
 // }
 
-// pass by value & pass by reference 
+// pass by value & pass by reference .
  
 // pass by value 
 const name  = 'polash';
@@ -23,4 +23,4 @@ function greet(val){
 }
 greet(name)
 
-// pass by reference 
+// pass by reference .
