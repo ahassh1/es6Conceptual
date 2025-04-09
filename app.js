@@ -1,7 +1,7 @@
 // primitive and non-primitive data type 
 
 // primitive
-const name= 'polash'
+const names= 'polash'
 const num = 3;
 
 // non-primitive
@@ -96,7 +96,7 @@ function add(){
 }
 add()
 
-// block scope 
+// block scope for just let and const usecase not var 
 const isStudent =true;
 function modifyStudent(ans){
     let courseAccess = true;
@@ -107,3 +107,16 @@ function modifyStudent(ans){
     console.log(supportSession)
 }
 modifyStudent(isStudent)
+
+///////////////////////////////////////////////////////////
+// higher order function and 
+function greeting(named, fn){
+    const message = 'say hello,' + named;
+    fn(message)
+}
+
+// callback function
+function sayHello(val){
+    console.log(val, 'say hello')
+};
+greeting('polash',sayHello)
