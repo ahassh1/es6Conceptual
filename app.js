@@ -44,7 +44,7 @@ console.log(arr)
 console.log(10=='10');
 console.log(10==='10')
 
-
+//////////////////////////////////////////////
 // var let const 
 
 function main(){
@@ -76,3 +76,34 @@ function main(){
     console.log(y)
 }
 main()
+//////////////////////////////////////////
+
+// scope(global , function , block)
+// global scope
+const name='john'
+
+// function scope
+function add(){
+     var age=33;
+     console.log(age)
+     function modify(){
+        const isMarrided  =false;
+        console.log(age + 20, isMarrided)
+     }
+     isMarrided =true;
+     console.log('his marital status is', isMarrided)
+     modify()
+}
+add()
+
+// block scope 
+const isStudent =true;
+function modifyStudent(ans){
+    let courseAccess = true;
+    if(ans){
+        const supportSession = 'available';
+        console.log(courseAccess, supportSession)
+    }
+    console.log(supportSession)
+}
+modifyStudent(isStudent)
